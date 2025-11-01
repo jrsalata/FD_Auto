@@ -13,7 +13,6 @@ def read_csv(filename: str) -> pd.DataFrame:
     df = pd.read_csv(filename)
     return df
 
-
 def main():
     df = read_csv(INPUT_CSV)
     file_writer = open(OUTPUT_CSV, 'w')
@@ -41,7 +40,6 @@ def main():
                 else:
                     tmp_dict[outer] = inner
             tmp_arr.append(is_fd)
-        print(tmp_arr)
         for item in tmp_arr:
             file_writer.write(item + ',')
         file_writer.write('\n')
